@@ -1,0 +1,22 @@
+<div class="nav-box-flex-container">
+    <div *ngFor="let navBox of navigationBoxes; let i = index" class="nav-box-flex-item" (mouseenter)="mouseEventFunc(navBox)"
+        (mouseleave)="mouseEventFunc(navBox)">
+        <div [class.nav-box-hidden-section]="isHovered(navBox)" class="nav-box-inner-flex-container">
+            <div class="nav-box-nav-link">
+                <a class="nav-box-a" href={{navBox.linkUrl}}>{{navBox.linkText}}</a>
+                <p [class.nav-box-hide-mobile]="navBox.isHidden">{{navBox.displayShortDescription(navBox.linkDescription, 100)}}</p>
+            </div>
+            <div class="nav-box-mobile-only">
+                <button type="button" class="fa" [class.fa-angle-double-down]="isCollapsed(navBox)" [class.fa-angle-double-up]="!isCollapsed(navBox)" 
+                    (click)="toggle(navBox, i)">
+                <span class="sr-only">Toggle button to expand or collapse a section!</span>
+            </button>
+            </div>
+        </div>
+        <div class="nav-box-desktop-only">
+            <div [class.nav-box-hidden-section]="!isHovered(navBox)">
+               <a class="nav-box-a" href="{{navBox.linkUrl}}">{{navBox.displayShortDescription(navBox.linkDescription, 200)}}</a>
+            </div>
+        </div>
+    </div>
+</div>

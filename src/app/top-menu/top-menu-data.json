@@ -1,0 +1,28 @@
+{
+    "data":[
+        {
+            "title": "Menu item 1",
+            "linkUrl": "http://www.google.com"
+        },
+        {   
+            "title": "Menu item 2 - long title",
+            "linkUrl": "#"
+        },
+        { 
+            "title": "Menu item 3",
+            "linkUrl": "#"
+        },
+        { 
+            "title": "Menu item 4",
+            "linkUrl": "#"
+        },
+        { 
+            "title": "Menu item 5 - long title",
+            "linkUrl": "#"
+        },
+        { 
+            "title": "Menu item 6",
+            "linkUrl": "#"
+        }
+    ]
+}

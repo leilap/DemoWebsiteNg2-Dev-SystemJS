@@ -1,0 +1,10 @@
+<div class="top-menu-hamburger">
+    <a id="hamburger-button" role="button" (click)="displayMenuForMobile()"><i class="fa fa-bars" aria-hidden="true"></i><span> Menu</span></a>
+</div>
+<div id="top-menu-list" [hidden]="!show">
+    <ul>
+        <li *ngFor="let item of topMenuItems">
+            <a href="{{item.linkUrl}">{{item.title}} <i class="mobile-only fa fa-arrow-right" aria-hidden="true"></i></a>
+        </li>
+    </ul>
+</div>
